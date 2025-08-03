@@ -1,0 +1,11 @@
+{/* Description */} <p className="text-lg text-gray-600 mb-8"> Your app is ready and working perfectly! </p> {/* Simple Counter */} <div className="bg-white p-6 rounded-lg shadow-lg"> <p className="text-gray-600 mb-4"> Button clicks: <span className="font-bold text-blue-600">{clicks}</span> </p> <button
+
+onClick={() => setClicks(clicks + 1)} className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700" > Click Me! 🚀 </button> </div> {/* Tech badges */} <div className="mt-8 flex gap-2 justify-center flex-wrap"> <span className="px-3 py-1 bg-black text-white text-sm rounded-full">Next.js</span> <span className="px-3 py-1
+
+bg-blue-600 text-white text-sm rounded-full">TypeScript</span> <span className="px-3 py-1 bg-cyan-600 text-white text-sm rounded-full">Tailwind</span> </div> </div> </div> ) }
+
+⚙️ next.config.js (Simple config!)
+/** @type {import('next').NextConfig} */ const nextConfig = { images: { remotePatterns: [ { protocol: 'https', hostname: 'ohara-assets.s3.us-east-2.amazonaws.com', }, ], }, }}, ], }, }module.exports = nextConfig
+
+🛠️ tailwind.config.js (Basic Tailwind!)
+/ @type {import('tailwindcss').Config} */ module.exports = { content: [ "./src/pages//*.{js,ts,jsx,tsx,mdx}", "./src/components//*.{js,ts,jsx,tsx,mdx}", "./src/app//*.{js,ts,jsx,tsx,mdx}", ], theme: { extend: {}, }, plugins: [], }
